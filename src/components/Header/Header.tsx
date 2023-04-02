@@ -21,7 +21,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { Stack } from "@mui/material";
 
-const pages = ["Home", "Marketplace", "Contact", "About"];
+const pages = ["Home", "Marketplace", "Contact", "About", "Login"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 const pagesLogos: IconDefinition[] = [

@@ -5,11 +5,15 @@ import FeatureCard from "../FeatureCard/FeatureCard";
 import Testimonial from "../Testimonial/Testimonial";
 import Feedback from "../Feedback/Feedback";
 import ValueSection from "../ValueSection/ValueSection";
+import LoginPage from "../LoginPage/LoginPage";
+import CreateAccount from "../CreateAccount/CreateAccount";
 
 const Body = () => {
   return (
     <Box>
-      <Hero />
+      <CreateAccount />
+      {/* <LoginPage /> */}
+      {/* <Hero />
       <Box
         sx={{
           py: 3,
@@ -40,7 +44,7 @@ const Body = () => {
       </Box>
       <Testimonial />
       <ValueSection />
-      <Feedback />
+      <Feedback /> */}
     </Box>
   );
 };
