@@ -13,10 +13,11 @@ const ValueSection = () => {
       sx={{
         display: "flex",
         justifyContent: "space-evenly",
+        flexWrap: "wrap",
         alignItems: "center",
-        my: 5,
+        m: 5,
         py: 3,
-        height: "30vh",
+        minHeight: "30vh",
       }}
     >
       <Box sx={{}}>
@@ -24,23 +25,32 @@ const ValueSection = () => {
           Our Values
         </Typography>
         <Typography variant="h5">
-          We Celebrate All The Students And Their Journey.
+          We Celebrate All The Students <br /> And Their Journey.
         </Typography>
+        <br />
         <Typography variant="h5">
-          We Are Proud To Make Student's Life Easier
+          We Are Proud To Make <br /> Student's Life Easier
         </Typography>
       </Box>
 
       <Box
         sx={{
           display: "flex",
+          flexWrap: "wrap",
+          justifyContent: "center",
           gap: 4,
+          py: 3,
         }}
       >
         <Box
           sx={{
             display: "flex",
             flexDirection: "column",
+            p: 3,
+            backgroundColor: " #9921e8",
+            background: "linear-gradient(315deg, #9921e8 0%, #5f72be 74%)",
+            borderRadius: "20px",
+            color: "white",
           }}
         >
           <FontAwesomeIcon icon={faUsers} size="5x" />
@@ -53,6 +63,11 @@ const ValueSection = () => {
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
+            backgroundColor: " #9921e8",
+            background: "linear-gradient(315deg, #9921e8 0%, #5f72be 74%)",
+            borderRadius: "20px",
+            color: "white",
+            p: 3,
           }}
         >
           <FontAwesomeIcon icon={faFaceSmile} size="5x" />
@@ -66,13 +81,18 @@ const ValueSection = () => {
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
+            border: "2px solid green",
+            p: 3,
+            backgroundColor: " #9921e8",
+            background: "linear-gradient(315deg, #9921e8 0%, #5f72be 74%)",
+            borderRadius: "20px",
+            color: "white",
           }}
         >
           <FontAwesomeIcon icon={faShieldHalved} size="5x" />
           <Typography variant="h5" mt={3}>
-            Ensuring topmost
+            Ensuring topmost security
           </Typography>
-          <Typography variant="h5"> security</Typography>
         </Box>
       </Box>
     </Box>

@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@chakra-ui/react": "^2.5.5",
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
     "@fontsource/roboto": "^4.5.8",
@@ -21,11 +22,14 @@
     "@mui/material": "^5.11.15",
     "@mui/styled-engine-sc": "^5.11.11",
     "@react-spring/web": "^9.7.1",
-    "framer-motion": "^10.10.0",
+    "bootstrap": "^5.2.3",
+    "framer-motion": "^10.11.2",
     "react": "^18.2.0",
+    "react-bootstrap": "^2.7.2",
     "react-bouncing-text": "^0.0.4",
     "react-dom": "^18.2.0",
     "react-icons": "^4.8.0",
+    "react-router-dom": "^6.10.0",
     "styled-components": "^5.3.9"
   },
   "devDependencies": {

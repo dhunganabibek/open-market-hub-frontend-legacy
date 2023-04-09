@@ -19,7 +19,6 @@ import {
   faEnvelope,
   faCircleInfo,
 } from "@fortawesome/free-solid-svg-icons";
-import { Stack } from "@mui/material";
 
 const pages = ["Home", "Marketplace", "Contact", "About"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
@@ -30,7 +29,9 @@ const pagesLogos: IconDefinition[] = [
   faEnvelope,
   faCircleInfo,
 ];
+const pagesRoutes = ["/home", "/marketplace", "/contact", "/about"];
 
+//header components
 const Header = () => {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(
     null
@@ -140,6 +141,7 @@ const Header = () => {
               {pages.map((page, index) => (
                 <Button
                   key={page}
+                  href={pagesRoutes[index]}
                   onClick={handleCloseNavMenu}
                   sx={{
                     my: 2,

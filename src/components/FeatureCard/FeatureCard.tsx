@@ -23,8 +23,9 @@ const FeatureCard = ({ feature, description, icon }: FeatureCardInfo) => {
         sx={{
           maxWidth: 345,
           borderRadius: "25px",
-          background: "#0f1624",
-          color: "#FFF",
+          background: "linear-gradient(315deg, #9921e8 0%, #5f72be 74%)",
+          color: "white",
+          m: 2,
         }}
       >
         <Box
@@ -34,21 +35,23 @@ const FeatureCard = ({ feature, description, icon }: FeatureCardInfo) => {
             pt: 3,
           }}
         >
-          <FontAwesomeIcon icon={icon} size="5x" />
+          <FontAwesomeIcon icon={icon} size="5x" color="#FFFFF" />
         </Box>
+
         <CardContent>
-          <Typography gutterBottom variant="h5" component="div" color="white">
+          <Typography gutterBottom variant="h5" component="div" color="#FFF">
             {feature}
           </Typography>
-          <Typography variant="body2" color="white">
+          <Typography variant="body2" color="rgba(255,255,255,0.6)">
             {description}
           </Typography>
         </CardContent>
+
         <CardActions>
-          <Button size="small" color="info">
+          <Button size="small" color="secondary">
             Share
           </Button>
-          <Button size="small" color="info">
+          <Button size="small" color="secondary">
             Learn More
           </Button>
         </CardActions>

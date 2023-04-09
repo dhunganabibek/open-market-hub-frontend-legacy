@@ -7,21 +7,20 @@ const Testimonial = () => {
   return (
     <Box
       sx={{
-        height: "50vh",
+        py: 5,
         my: 5,
         backgroundColor: " #A020F0",
         color: "#FFF",
         display: "flex",
         justifyContent: "space-evenly",
         alignItems: "center",
-      }}
-      style={{
-        clipPath: "polygon(0 13%, 100% 0, 100% 90%, 0% 100%)",
+        flexWrap: "wrap",
       }}
     >
-      <Typography variant="h4" sx={{}}>
-        Here’s what people have to say about us.
-      </Typography>
+      <Box>
+        <Typography variant="h4">Here’s what people</Typography>
+        <Typography variant="h4">have to say about us</Typography>
+      </Box>
       <Box
         sx={{
           display: "flex",

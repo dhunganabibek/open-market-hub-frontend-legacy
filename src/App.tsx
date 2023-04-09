@@ -2,21 +2,28 @@ import { Box } from "@mui/material";
 import Body from "./components/Body/Body";
 import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
-import ThemeProvider from "@mui/material/styles/ThemeProvider";
-import { theme } from "./components/theme/theme";
+import { Routes, Route } from "react-router-dom";
+import Marketplace from "./pages/Marketplace/Marketplace";
+import About from "./pages/About/About";
+import Contact from "./pages/Contact/Contact";
 
 function App() {
   return (
     <Box
       sx={{
-        background: "#FFF",
+        background: "white",
+        // "linear-gradient(rgba(45, 55, 72, 0) 0%, rgb(45, 55, 72) 100%), rgb(26, 32, 44)",
       }}
     >
-      <ThemeProvider theme={theme}>
-        <Header />
-        <Body />
-        <Footer />
-      </ThemeProvider>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Body />} />
+        <Route path="/home" element={<Body />} />
+        <Route path="/marketplace" element={<Marketplace />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/about" element={<About />} />
+      </Routes>
+      <Footer />
     </Box>
   );
 }

@@ -10,10 +10,10 @@ const Feedback = () => {
         flexDirection: "column",
         justifyContent: "center",
         gap: 2,
-        py: 2,
+        p: 2,
         background: "#A020F0",
-        height: "30vh",
-        clipPath: "polygon(0 24%, 100% 0, 100% 100%, 0% 100%)",
+        height: "40vh",
+        clipPath: "polygon(0 15%, 100% 0, 100% 100%, 0% 100%)",
       }}
     >
       <Typography variant="h4" color="#FFF">

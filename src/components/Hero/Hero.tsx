@@ -1,20 +1,18 @@
-import React from "react";
-import { motion } from "framer-motion";
 import { Box, Button, Stack, Typography } from "@mui/material";
 import heroImage from "../../assets/hero.jpg";
-import Header from "../Header/Header";
 
 const Hero = () => {
   return (
     <Box
       sx={{
-        height: "78vh",
-        backgroundImage: `url(${heroImage})`,
+        height: "80vh",
+        background: `linear-gradient(rgba(160, 32, 240, 0.2),rgba(160, 32, 240, 0.2)), url(${heroImage})`,
+        backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
       style={{
-        clipPath: "polygon(0 0, 100% 0%, 100% 85%, 0% 100%)",
+        clipPath: "polygon(0 0, 100% 0%, 100% 90%, 0% 100%)",
       }}
     >
       <Box
@@ -22,6 +20,7 @@ const Hero = () => {
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
+          flexWrap: "wrap",
           gap: "2em",
           alignItems: "flex-end",
           height: "100%",
@@ -29,31 +28,30 @@ const Hero = () => {
       >
         <Box
           sx={{
-            marginRight: "10%",
+            margin: "10%",
           }}
         >
           <Typography variant="h2" component="h2" color="#FFF">
             Open Market Hub
           </Typography>
           <Typography
-            variant="h4"
+            variant="h5"
             color="#00ffea"
             sx={{ maxWidth: "550px", marginY: 4 }}
           >
             Welcome to the Smart, Safe and Best Responsive Way to Buy and Sell
             Products Locally!
           </Typography>
-          <Typography variant="h5" color="#FFF"></Typography>
 
           <Stack direction="row" gap={2}>
             <Button
               variant="contained"
               color="warning"
               sx={{
-                height: "70px",
+                height: "3em",
                 borderRadius: "20px",
-                fontSize: "23px",
-                padding: 3,
+                fontSize: "1em",
+                padding: 2,
               }}
             >
               Get Started
@@ -61,12 +59,11 @@ const Hero = () => {
             <Button
               variant="outlined"
               color="info"
-              size="large"
               sx={{
-                height: "70px",
+                height: "3em",
                 borderRadius: "20px",
-                fontSize: "23px",
-                padding: 3,
+                fontSize: "1em",
+                padding: 2,
               }}
             >
               Learn More
