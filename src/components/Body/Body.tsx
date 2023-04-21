@@ -7,11 +7,14 @@ import Feedback from "../Feedback/Feedback";
 import ValueSection from "../ValueSection/ValueSection";
 import LoginPage from "../LoginPage/LoginPage";
 import CreateAccount from "../CreateAccount/CreateAccount";
+import ForgetPassword from "../ForgetPassword/ForgetPassword";
 
 const Body = () => {
   return (
     <Box>
+      {/*<CreateAccount />*/}
       <CreateAccount />
+      {/*<ForgetPassword />*/}
       {/* <LoginPage /> */}
       {/* <Hero />
       <Box

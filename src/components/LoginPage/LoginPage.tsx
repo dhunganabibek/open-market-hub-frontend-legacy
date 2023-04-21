@@ -1,30 +1,139 @@
-import { Box, Button, Input, TextField } from "@mui/material";
-import React from "react";
+import React, { useState } from "react";
+import {
+  Box,
+  Button,
+  Checkbox,
+  FormControl,
+  FormControlLabel,
+  FormLabel,
+  Grid,
+  Link,
+  TextField,
+  Typography,
+} from "@mui/material";
 
-const LoginPage = () => {
-  function loginButton() {
-    console.log("Login sucessful");
-  }
+interface LoginForm {
+  email: string;
+  password: string;
+  rememberMe: boolean;
+}
+
+const LoginPage: React.FC = () => {
+  const [loginForm, setLoginForm] = useState<LoginForm>({
+    email: "",
+    password: "",
+    rememberMe: false,
+  });
+
+  const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value, checked } = event.target;
+    setLoginForm((prevLoginForm) => ({
+      ...prevLoginForm,
+      [name]: name === "rememberMe" ? checked : value,
+    }));
+  };
+
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    console.log(loginForm);
+    // TODO: handle login logic
+  };
+
   return (
     <Box
-      display="flex"
-      justifyContent="center"
-      alignItems="center"
-      minHeight="100vh"
+      sx={{
+        display: "flex",
+        flexDirection: { xs: "column", md: "row" },
+        justifyContent: "center",
+        alignItems: "center",
+        textAlign: "center",
+        minHeight: "100vh",
+      }}
     >
-      <Box>
-        <h1> Login Page</h1>
-        <TextField
-          id="filled-basic"
-          label="Enter your email"
-          variant="filled"
-        />{" "}
+      <Box
+        width={{ xs: "100%", md: "50%" }}
+        padding={{ xs: "0 20px", md: "0 40px" }}
+      >
+        <div id="logo">
+          <Typography
+            variant="h2"
+            style={{
+              fontSize: "400%",
+              color: "DarkBlue",
+              fontFamily: '"Segoe UI"',
+              fontWeight: "400px",
+            }}
+          >
+            OpenMarketHub
+          </Typography>
+        </div>
         <br />
-        <TextField id="filled-basic" label="Password" variant="filled" /> <br />
-        <Button variant="contained" onClick={loginButton}>
+        <div id="h5">
+          <Typography variant="h5">
+            Creating Entrepreneurs for the upcoming generation.
+          </Typography>
+        </div>
+      </Box>
+      <Box
+        component="form"
+        onSubmit={handleSubmit}
+        width={{ xs: "100%", md: "45%" }}
+        padding={{ xs: "0 20px", md: "0 40px" }}
+        marginTop={{ xs: "40px", md: "0" }}
+      >
+        <Typography variant="h5" mb={2}>
+          Returning User
+        </Typography>
+        <Grid container spacing={2}>
+          <Grid item xs={12}>
+            <TextField
+              required
+              fullWidth
+              id="email"
+              label="Email Address"
+              name="email"
+              autoComplete="email"
+              value={loginForm.email}
+              onChange={handleInputChange}
+            />
+          </Grid>
+          <Grid item xs={12}>
+            <TextField
+              required
+              fullWidth
+              name="password"
+              label="Password"
+              type="password"
+              id="password"
+              autoComplete="new-password"
+              value={loginForm.password}
+              onChange={handleInputChange}
+            />
+          </Grid>
+          <Grid item xs={12}>
+            <FormControlLabel
+              control={
+                <Checkbox
+                  name="rememberMe"
+                  checked={loginForm.rememberMe}
+                  color="primary"
+                  onChange={handleInputChange}
+                />
+              }
+              label="Remember me"
+            />
+          </Grid>
+        </Grid>
+        <Button type="submit" fullWidth variant="contained" sx={{ mt: 3 }}>
           Login
         </Button>
-        <br />
+        <Grid container justifyContent="flex-end" mt={2}>
+          <Grid item>
+            <Link href="/forgotPassword/" variant="body2">
+              Forgot password?
+            </Link>
+          </Grid>
+        </Grid>
       </Box>
     </Box>
   );
