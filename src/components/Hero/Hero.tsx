@@ -42,8 +42,8 @@ const Hero = () => {
             sx={{ maxWidth: "450px", marginY: 4, pl: { lg: 2 } }}
             textAlign="center"
           >
-            Hello Everyone!! Welcome to the Smart, Safe and Responsive Way to
-            Buy and Sell Products Locally!
+            Welcome to the Smart, Safe and Responsive Way to Buy and Sell
+            Products Locally!
           </Typography>
 
           <Box
