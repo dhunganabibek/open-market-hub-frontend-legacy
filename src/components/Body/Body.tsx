@@ -42,7 +42,7 @@ const Body = () => {
       >
         <CustomGradientCard
           color="#ebe8e8"
-          feature="Higher Security"
+          feature="Higher Security!"
           icon={faLock}
           description="Implementation of measures and protocols to reduce the risk of unauthorized access, data breaches, and other security threats."
         />
